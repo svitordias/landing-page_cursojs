@@ -14,6 +14,7 @@
 .main-content {
     max-width: 120rem;
     margin: 0 auto; 
+    padding: 10rem var(--gap);
 }
 
 .section {
@@ -88,7 +89,7 @@
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .intro-text-content, .intro-img {
@@ -105,8 +106,54 @@
 .top3-content {
     max-width: 64rem;
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
     height: 100vh;
     text-align: center;
+}
+
+.grid-one-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.grid-main-heading {
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+    text-align: left;
+}
+
+.grid-description {
+    margin-top: 0;
+    padding-bottom: 5.5rem;
+    text-align: left;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    counter-reset: grid-counter;
+}
+
+.grid h3 {
+    font-size: 3rem;
+    position: relative;
+    padding-left: 5rem;
+    margin-bottom: 3rem;
+}
+
+.grid h3::before {
+    counter-increment: grid-counter;
+    content: counter(grid-counter);
+    position: absolute;
+    font-size: 8rem;
+    font-style: italic;
+    top: -4rem;
+    left: -2rem;
+    transform: rotate(5deg);
 }
