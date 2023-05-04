@@ -13,14 +13,18 @@
     <title>Landing Page</title>
 </head>
 <body>
+
+    <input id="close-menu" class="close-menu" type="checkbox"
+    arial-label="Close menu" role="button">
+    <label class="close-menu-label" for="close-menu" title="close" ></label>
     <aside class="menu white-bg">
         <div class="main-content menu-content">
-        <h1>
+        <h1 onclick="getElementById('close-menu').checked = false">
             <a href="#home">LOGO</a>
         </h1>
 
         <nav>
-            <ul>
+            <ul onclick="getElementById('close-menu').checked = false">
                 <li><a href="#intro">Intro</a></li>
                 <li><a href="#grid1">Grid 1</a></li>
                 <li><a href="#gallery">Gallery</a></li>
@@ -226,6 +230,8 @@
     <footer id="footer" class="footer white-bg">
         <p>Feito por Vitor</p>
     </footer>
+
+    <a class="back-to-top" href="#home">➤</a>
     
 </body>
 </html>
